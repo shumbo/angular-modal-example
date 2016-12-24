@@ -1,0 +1,15 @@
+<div class="modal is-active">
+  <div class="modal-background" (click)="close()"></div>
+  <div class="modal-content">
+    <div class="box">
+      <h1>This is an modal</h1>
+      <p>What is your name?</p>
+      <label class="label">Name</label>
+      <p class="control">
+        <input class="input" [(ngModel)]='name' type="text" placeholder="Angular Man">
+      </p>
+      <button class="button is-primary" (click)="done()">Done</button>
+    </div>
+  </div>
+  <button class="modal-close"></button>
+</div>
