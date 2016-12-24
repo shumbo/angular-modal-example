@@ -4,9 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 /* Modal */
-
 import { ModalEntryComponent, ModalInnerDirective } from './modal/modal.component';
 import { Modal } from './modal/modal.service';
+
+/* Notification */
+import { NotificationComponent, NotificationEntryComponent, NotificationInnerDirective } from './notification/notification.component';
+import { Notification } from './notification/notification.service';
 
 import { AppComponent } from './app.component';
 import { SampleModalComponent } from './sample-modal/sample-modal.component';
@@ -16,10 +19,14 @@ import { SampleModalComponent } from './sample-modal/sample-modal.component';
     AppComponent,
     ModalEntryComponent,
     ModalInnerDirective,
-    SampleModalComponent
+    SampleModalComponent,
+    NotificationComponent,
+    NotificationEntryComponent,
+    NotificationInnerDirective
   ],
   entryComponents: [
-    SampleModalComponent
+    SampleModalComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +34,8 @@ import { SampleModalComponent } from './sample-modal/sample-modal.component';
     HttpModule
   ],
   providers: [
-    Modal
+    Modal,
+    Notification
   ],
   bootstrap: [AppComponent]
 })

@@ -1,7 +1,37 @@
 <app-modal-entry></app-modal-entry>
+<app-notification-entry></app-notification-entry>
 
-<h1 class="title is-1">
-  {{title}}
-</h1>
+<div class="container">
 
-<p><button class="button" (click)="openModal()">Open Modal</button></p>
+  <h1 class="title is-1">
+    {{title}}
+  </h1>
+
+  <p><button class="button" (click)="openModal()">Open Modal</button></p>
+
+  <hr>
+
+  <form>
+    <label class="label">Notification Message</label>
+    <p class="control">
+      <input class="input" name="message" [(ngModel)]="message" type="text" placeholder="Hello World">
+    </p>
+    <label class="label">Notification Type</label>
+    <p class="control">
+      <span class="select">
+        <select name="type" [(ngModel)]="type">
+          <option value="primary">Primary</option>
+          <option value="info">Info</option>
+          <option value="success">Success</option>
+          <option value="warning">Warning</option>
+          <option value="danger">Danger</option>
+        </select>
+      </span>
+    </p>
+    <label class="label">Expire</label>
+    <p class="control">
+      <input class="input" name="expire" [(ngModel)]="expire" type="number" placeholder="0">
+    </p>
+    <button class="button" (click)="notify()">Notify</button>
+  </form>
+</div>
